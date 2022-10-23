@@ -56,8 +56,43 @@
 .title {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
-  font-size: 8.5vw;
+  font-size: 15.5vw;
   text-transform: uppercase;
+}
+hr,   
+hr:before,
+hr:after {
+    content: "";
+    background: #BFE2FF;
+    display: block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    position: absolute;
+    animation: anim-hr 6s linear infinite;
+    border: 0;
+    overflow: visible;
+}
+hr:before {
+    left: -32px;
+}
+hr:after {
+    left: 32px;
+}
+hr {
+    position: relative;
+    margin: 30px auto;
+}
+@keyframes anim-hr {
+    0% {
+        background: #BFE2FF;
+    }
+    50% {
+        background: #337AB7;
+    } 
+    100% {
+        background: #BFE2FF;
+    }
 }
     </style>
 </head>
@@ -69,10 +104,9 @@
           <span class="title-word title-word-3">Birthday</span>
           <span class="title-word title-word-4">to you!</span>
         </h2>
-      </div>
-      <div class="container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/O9-Tr9MgrSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+        <hr>
+        <br>
+        <iframe width="700" height="500" src="https://www.youtube.com/embed/mqkPbpeEsog" title="YouTube video player" frameborder="5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      </div>
 </body>
 
 </html>
