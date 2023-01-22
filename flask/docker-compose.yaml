@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  redis:
+    image: redis:3.2.0
+    networks: 
+      - flask_net
+  
+  flask:
+    build: .
+    depends_on: 
+      - redis
+    networks:
+      - flask_net
+    ports:
+      - "80:5000"
+
+networks:
+  flask_net:
+    driver: bridge
