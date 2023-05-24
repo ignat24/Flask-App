@@ -8,7 +8,7 @@ def main():
 
 @app.route('/success/<name>')
 def success(name):
-    return render_template("present.html", value=name)
+    return render_template("present.ht`ml", value=name)
  
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -18,7 +18,3 @@ def login():
     else:
         user = request.args.get('nm')
         return redirect(url_for('success', name=user))
- 
- 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
